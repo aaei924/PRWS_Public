@@ -16,9 +16,6 @@ getTimeStamp
 
 API 호출 URL
 =============================
-ComciganString
----------------------
-https://api.prws.kr/ComciganString/
 
 MCLatestForgeVersion
 ----------------------
