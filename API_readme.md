@@ -16,14 +16,17 @@ getTimeStamp
 
 API 호출 URL
 =============================
+ComciganString
+----------------------
+https://api.prws.kr/ComciganString
 
 MCLatestForgeVersion
 ----------------------
-https://api.prws.kr/MCLatestForgeVersion/
+https://api.prws.kr/MCLatestForgeVersion
 
 getTimeStamp
 ----------------------
-https://api.prws.kr/getTimeStamp/
+https://api.prws.kr/getTimeStamp
 
 API 호출 인자
 =============================
