@@ -31,7 +31,7 @@ client.on('message', msg => {
     switch (args[0].toLowerCase()) {
         case "안녕": // 명령어 감지
             msg.channel.send("> 안녕하세요.")
-            break; // 실행중단
+            break; // 실행중단 
 
         case "핑": // 핑 임베드 연습
             msg.channel.send({
