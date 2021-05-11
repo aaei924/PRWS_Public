@@ -103,7 +103,7 @@ if (!$_GET['Name']) {
     $search = $_GET['Name'];
                 
         // 컴시간
-    $comcigan = file_get_html('https://api.prws.kr/ComciganSchoolSearch?key=X6bRU1QbEJTVjFOVWIydGxiancrYUQxd2NuZHpMbXR5TzJFOWQybHNaR05oY21RN2RUMTNaV0k3YVQxaFpHMXBianc&SchoolName='.urlencode($_GET['Name'])); 
+    $comcigan = file_get_html('https://api.prws.kr/ComciganSchoolSearch?key={PRWS-API-KEY}&SchoolName='.urlencode($_GET['Name'])); 
     $comci = json_decode($comcigan, true);
     $comci = $comci['Results'];
 
@@ -113,7 +113,7 @@ if (!$_GET['Name']) {
     $riro = $riro['data'];
 
         // NEIS
-    $g = file_get_html('https://open.neis.go.kr/hub/schoolInfo?KEY=68182fd68d404fdd89272e42abad373c&Type=json&SCHUL_NM='.urlencode($_GET['Name']));
+    $g = file_get_html('https://open.neis.go.kr/hub/schoolInfo?KEY={NEIS-API-KEY}&Type=json&SCHUL_NM='.urlencode($_GET['Name']));
     $neis = json_decode($g, true);
     $neis = $neis['schoolInfo'][1]['row'];
 
@@ -236,7 +236,7 @@ if (!$_GET['Name']) {
     }
 
     // 학교알리미
-    $sci = file_get_html('https://api.prws.kr/parseSchoolInfo?key=X6bRU1QbEJTVjFOVWIydGxiancrYUQxd2NuZHpMbXR5TzJFOWQybHNaR05oY21RN2RUMTNaV0k3YVQxaFpHMXBianc&Code='.$hcs['orgCode']);
+    $sci = file_get_html('https://api.prws.kr/parseSchoolInfo?key={PRWS-API-KEY}&Code='.$hcs['orgCode']);
     $si = json_decode($sci, true);
 
     // 컴시간/리로 사용 안하는 학교(중학교 이상)
